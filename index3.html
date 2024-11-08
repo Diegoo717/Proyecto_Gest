@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos.css">
+    <title>index3</title>
+    <style>
+        #imagen-container {
+            text-align: center; /* Para centrar la imagen */
+            margin-top: 50px; /* Ajusta este valor según sea necesario */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>TUS PLANES</h1>
+            <ul>
+                <li><a href="index4.php">GENERAR PLAN DE ALIMENTACION</a></li>
+                <li><a href="index5.php">PERFIL</a></li>
+                <li><a href="Index.html">CERRAR SESIÓN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor para la imagen -->
+    <div id="imagen-container"></div>
+
+    <script>
+        // Obtener el objetivo de la URL
+        var urlParams = new URLSearchParams(window.location.search);
+        var objetivo = urlParams.get('objetivo');
+
+        // Crear un elemento de imagen
+        var img = document.createElement("img");
+
+        // Establecer el src de la imagen según el objetivo obtenido de la URL
+        switch (objetivo) {
+            case "aumentar":
+                img.src = "dietaAumenMM.png";
+                img.style.border = "5px solid black"; // Establecer el borde negro
+                break;
+            case "bajar":
+                img.src = "dietaBajarPeso.jpg";
+                img.style.border = "5px solid black"; // Establecer el borde negro
+                break;
+            case "mantener":
+                img.src = "dietaMantPeso.jpg";
+                img.style.border = "5px solid black"; // Establecer el borde negro
+                break;
+            default:
+                // En caso de que no se seleccione ningún objetivo
+                img.src = ""; // No se establece ninguna imagen
+        }
+
+        // Establecer el tamaño de la imagen
+        img.style.width = "40%";
+
+        // Agregar la imagen al contenedor
+        document.getElementById("imagen-container").appendChild(img);
+    </script>
+
+</body>
+</html>

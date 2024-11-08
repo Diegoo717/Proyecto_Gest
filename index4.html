@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos.css">
+    <title>Generacion de plan</title>
+</head>
+<body>
+    
+    <form class="formulario_registro" action="index3.html" method="post">
+
+        <h4>Generar plan personalizado</h4>
+       <input class="campos" type="number" name="peso" id="peso" placeholder="Peso" required>
+       <input class="campos" type="number" step="0.1" name="altura" id="altura" placeholder="Altura" required>
+
+        <select class="campos" id="objetivo" name="objetivo" required>
+            <option value="" disabled selected>Selecciona tu objetivo nutricional</option>
+            <option value="aumentar">Aumentar masa muscular</option>
+            <option value="bajar">Perder grasa</option>
+            <option value="mantener">Mantener un peso saludable</option>
+        </select>
+
+       <button type="submit" class="botones">Aceptar</button>
+       
+       <p><a href="index3.html">Volver</a></p> 
+
+    </form>
+
+    <script>
+        // Obtener el elemento select y el botón de enviar
+        var selectObjetivo = document.getElementById("objetivo");
+        var form = document.querySelector('.formulario_registro');
+
+        // Función para mostrar la imagen correspondiente al objetivo seleccionado
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario
+
+            var imagenSrc;
+
+            // Obtener el valor seleccionado del objetivo
+            var objetivo = selectObjetivo.value;
+
+            // Determinar la imagen correspondiente
+            switch (objetivo) {
+                case "aumentar":
+                    imagenSrc = "dietaAumenMM.png";
+                    break;
+                case "bajar":
+                    imagenSrc = "dietaBajarPeso.jpg";
+                    break;
+                case "mantener":
+                    imagenSrc = "dietaMantPeso.jpg";
+                    break;
+                default:
+                    // En caso de no seleccionar un objetivo válido
+                    imagenSrc = ""; // Otra imagen o mensaje de error
+            }
+
+            // Redirigir a index3.html y pasar el objetivo como parámetro en la URL
+            if (imagenSrc !== "") {
+                window.location.href = "index3.html?objetivo=" + objetivo;
+            }
+        });
+    </script>
+
+</body>
+</html>

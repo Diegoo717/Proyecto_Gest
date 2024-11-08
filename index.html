@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos.css">
+    <title>Interfaz principal</title>
+    <style>
+        .imagen {
+            width: 420px; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: 420px;
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <h1>PLAN CHEAT MEAL</h1>
+            <ul>
+                <li><a href="http://localhost/proyecto/">REGISTRAR</a></li>
+                <li><a href="index2.php">INGRESAR</a></li>
+                <li><a href="index6.html">SOBRE NOSOTROS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <div class="texto">
+            <h2>¡Bienvenido!</h2>
+            <br>
+            <p>Todo el asesoramiento nutricional que necesitas. Experiencia de aplicación todo en uno.</p>
+        </div>
+        <div class="imagen">
+            <img id="imagenCentro" src="img1.png" alt="Descripción de la imagen"> 
+        </div>
+    </div>
+
+    <script>
+        // Selecciona la imagen por su ID
+        var imagen = document.getElementById('imagenCentro');
+
+        // Define la función para animar la imagen
+        function animateImage() {
+            // Aplica una transformación CSS a la imagen (en este caso, una rotación de 360 grados)
+            imagen.style.transform = 'rotate(360deg)';
+            // Establece la duración de la animación en 1 segundo
+            imagen.style.transition = 'transform 1s';
+            // Después de un breve retraso, vuelve la imagen a su posición original
+            setTimeout(function() {
+                imagen.style.transform = 'rotate(0deg)';
+                // Elimina la transición para evitar conflictos con la próxima rotación
+                setTimeout(function() {
+                    imagen.style.transition = 'none';
+                }, 1000); // Después de 1 segundo, elimina la transición
+            }, 1000); // Después de 1 segundo, vuelve a la posición original
+        }
+
+        // Llama a la función de animación cada 5 segundos
+        setInterval(animateImage, 6000);
+    </script>
+
+</body>
+</html>

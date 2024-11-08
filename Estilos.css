@@ -1,0 +1,194 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #008259;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+    background-color: rgb(21, 21, 21);
+}
+
+h1{
+    color: white;
+    font-size: 45px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul li{
+   display: inline-block;
+   padding: 0px 20px; 
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.texto {
+    color: white;
+    flex: 1;
+    padding: 10px;
+    margin-left: 20%;
+    width: 100%;
+    font-size: 180%;
+}
+
+
+.imagen {
+    flex: 1;
+
+    padding: 20px;
+    margin-right: 20%;
+    text-align: right;
+}
+
+.imagen img {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+}
+
+.formulario_registro {
+
+
+    width: 400px;
+    background: rgb(21,21,21);
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid white;
+
+}
+
+.formulario_IS {
+
+    width: 400px;
+    background:  rgb(21,21,21);
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid white;
+
+}
+
+h4 {
+
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+.campos {
+     width: 100%;
+     background: rgb(255, 255, 255);
+     padding: 10px;
+     border-radius: 4px;
+     margin-bottom: 16px;
+     border: 1px solid black;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 18px;
+}
+
+.formulario_registro p {
+
+    height: 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    color:white;
+
+}
+
+.formulario_IS p {
+
+    height: 15px;
+    
+    font-size: 16px;
+    line-height: 40px;
+    color:white;
+
+}
+
+.formulario_registro a:hover {
+
+    color:green;
+    text-decoration: underline;
+    
+
+}
+
+.formulario_IS a:hover {
+
+    color:green;
+    text-decoration: underline;
+    
+
+}
+
+a {
+
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-decoration: green;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+a:hover{
+    color: green;
+}
+
+.botones {
+    background-color: green;
+    color: white;
+    display: block;
+    margin: 18px auto; 
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    border: none;
+    border-radius: 4px;
+}
+
+
+.botones:hover {
+    background-color: darkgreen; 
+}
+
+.formulario_registro img {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.texto2 {
+    color: white;
+}
