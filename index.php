@@ -19,14 +19,18 @@
             var contraseña = document.getElementById("contraseña").value;
             var confirContraseña = document.getElementById("confir_contraseña").value;
             var email = document.getElementById("correo").value;
+            var edad = document.getElementById("edad").value;
             var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             var emailError = document.getElementById("email-error");
             var passwordError = document.getElementById("password-error");
+            var edadError = document.getElementById("edad-error");
 
-            emailError.innerHTML = ""; // Limpiar mensaje previo
-            passwordError.innerHTML = ""; // Limpiar mensaje previo
-            emailError.style.display = "none"; // Ocultar mensaje previo
-            passwordError.style.display = "none"; // Ocultar mensaje previo
+            emailError.innerHTML = "";
+            passwordError.innerHTML = "";
+            edadError.innerHTML = "";
+            emailError.style.display = "none";
+            passwordError.style.display = "none";
+            edadError.style.display = "none";
 
             var valid = true;
 
@@ -39,6 +43,12 @@
             if (contraseña !== confirContraseña) {
                 passwordError.innerHTML = "Las contraseñas no coinciden. Por favor, intenta de nuevo.";
                 passwordError.style.display = "block";
+                valid = false;
+            }
+
+            if (edad < 0) {
+                edadError.innerHTML = "La edad no puede ser un valor negativo.";
+                edadError.style.display = "block";
                 valid = false;
             }
 
@@ -58,6 +68,7 @@
         <input class="campos" type="password" name="confir_contraseña" id="confir_contraseña" placeholder="Confirmar contraseña" required>
         <div id="password-error" class="error-message"></div>
         <input class="campos" type="number" name="edad" id="edad" placeholder="Edad" required>
+        <div id="edad-error" class="error-message"></div>
         <p><input type="checkbox" id="terminos_condiciones" required> Estoy de acuerdo con los <a href="https://www.nutricionenforma.com/terminos-y-condiciones/">términos y condiciones</a></p>
         <p></p>
         <input class="botones" type="submit" name="aceptar" id="submitBtn" value="Registrar">
@@ -106,4 +117,4 @@
     ?>
 
 </body>
-</html>
+</html>  
