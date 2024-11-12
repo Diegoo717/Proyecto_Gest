@@ -66,7 +66,7 @@
             echo '<script>
                     document.getElementById("error-message").innerHTML = "Usuario o contraseña incorrectos.";
                     document.getElementById("error-message").style.display = "block";
-                  </script>';
+            </script>';
         }
 
         // Cerrar la conexión y liberar recursos

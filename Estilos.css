@@ -1,18 +1,16 @@
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
-    background-color: #008259;
+    background-color: #008259; /* Mantiene el mismo fondo verde */
     background-size: cover;
     background-attachment: fixed; 
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,15 +22,15 @@ nav{
     background-color: rgb(21, 21, 21);
 }
 
-h1{
+h1 {
     color: white;
     font-size: 45px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-ul li{
-   display: inline-block;
-   padding: 0px 20px; 
+ul li {
+    display: inline-block;
+    padding: 0px 20px; 
 }
 
 .contenedor {
@@ -51,10 +49,8 @@ ul li{
     font-size: 180%;
 }
 
-
 .imagen {
     flex: 1;
-
     padding: 20px;
     margin-right: 20%;
     text-align: right;
@@ -67,101 +63,81 @@ ul li{
 }
 
 .formulario_registro {
-
-
     width: 400px;
-    background: rgb(21,21,21);
+    background: rgb(21, 21, 21);
     padding: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: 1px solid white;
-
 }
 
 .formulario_IS {
-
     width: 400px;
-    background:  rgb(21,21,21);
+    background: rgb(21, 21, 21);
     padding: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: 1px solid white;
-
 }
 
 h4 {
-
     font-size: 22px;
     margin-bottom: 20px;
     color: white;
-
 }
 
 .campos {
-     width: 100%;
-     background: rgb(255, 255, 255);
-     padding: 10px;
-     border-radius: 4px;
-     margin-bottom: 16px;
-     border: 1px solid black;
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-size: 18px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
 }
 
 .formulario_registro p {
-
     height: 10px;
     text-align: center;
     font-size: 16px;
     line-height: 40px;
-    color:white;
-
+    color: white;
 }
 
 .formulario_IS p {
-
     height: 15px;
-    
     font-size: 16px;
     line-height: 40px;
-    color:white;
-
+    color: white;
 }
 
 .formulario_registro a:hover {
-
-    color:green;
+    color: green;
     text-decoration: underline;
-    
-
 }
 
 .formulario_IS a:hover {
-
-    color:green;
+    color: green;
     text-decoration: underline;
-    
-
 }
 
 a {
-
     font-size: 14px;
     color: rgb(255, 255, 255);
     text-decoration: green;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
 
-a:hover{
+a:hover {
     color: green;
 }
 
@@ -178,7 +154,6 @@ a:hover{
     border-radius: 4px;
 }
 
-
 .botones:hover {
     background-color: darkgreen; 
 }
@@ -191,4 +166,67 @@ a:hover{
 
 .texto2 {
     color: white;
+}
+
+/* Estilos añadidos para el perfil */
+.card {
+    background-color: rgb(21, 21, 21); /* Mantiene la estética oscura */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+}
+
+.profile-picture-container {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.profile-picture {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: linear-gradient(145deg, #4caf50, #388e3c);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(255, 255, 255, 0.2) inset; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.camera-icon:hover {
+    transform: scale(1.15); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(255, 255, 255, 0.3) inset;
+}
+
+.camera-icon img {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.camera-icon:hover img {
+    opacity: 1;
+}
+
+input[type="file"] {
+    display: none;
 }
